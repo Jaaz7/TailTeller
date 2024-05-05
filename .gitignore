@@ -1,0 +1,23 @@
+# Environment files
+env.py
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Cache
+.cache/
+__pycache__/
+images/
+
+# CSV files
+*.csv
