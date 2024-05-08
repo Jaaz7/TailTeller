@@ -5,7 +5,6 @@
 <br>
 **[Visit the live project here.](etc)**
 
-"I'm a good doggie, I deserves good algorithm."
 ---
 # Table of Contents
 - ### [Dataset Content](etc)
