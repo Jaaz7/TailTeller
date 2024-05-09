@@ -10,7 +10,8 @@ import random
 
 
 def visualizer_body():
-    st.write('### Dog Breed Identifier Visualizer')
+    st.write("### Dog Breed Identifier Visualizer")
     st.info(
-        '* The client would like to have a study to identify '
-         ' different dog breeds based on images.)')
+        "* The client would like to have a study to identify "
+        " different dog breeds based on images.)"
+    )

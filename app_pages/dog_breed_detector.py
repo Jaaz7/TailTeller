@@ -7,12 +7,11 @@ from src.machine_learning.load_sample_predict import plot_predictions
 
 
 def dog_breed_detector_body():
-    st.write('### Dog Breed Identification')
+    st.write("### Dog Breed Identification")
 
     st.info(
-        '* The client would like to be able to predict the dog breed based on '
-        'an image. '
-        )
+        "* The client would like to be able to predict the dog breed based on "
+        "an image. "
+    )
 
-    st.write('---')
-
+    st.write("---")
