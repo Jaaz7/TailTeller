@@ -18,9 +18,6 @@ Thumbs.db
 .cache/
 __pycache__/
 
-# Train and test images
-images/
-
 # CSV files
 *.csv
 
