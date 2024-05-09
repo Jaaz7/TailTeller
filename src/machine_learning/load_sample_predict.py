@@ -15,7 +15,26 @@ from keras.applications.inception_resnet_v2 import (
     preprocess_input as inc_resnet_preprocessor,
 )
 
-model = load_model("src/machine_learning/tailteller_model.keras")
+"""
+The following commented code was used to save the pre-trained models locally
+I then put them inside the src/machine_learning/models folder
+This is going to save a lot of time (and RAM) when predicting images live
+"""
+
+# model = NASNetLarge(weights='imagenet', include_top=False, input_shape=(299, 299, 3))
+# model.save('nasnet_large.h5')
+
+# model = InceptionV3(weights='imagenet', include_top=False)
+# model.save('inception_v3.h5')
+
+# model = Xception(weights='imagenet', include_top=False)
+# model.save('xception.h5')
+
+# model = InceptionResNetV2(weights='imagenet', include_top=False)
+# model.save('inception_resnet_v2.h5')
+
+
+model = load_model("src/machine_learning/models/tailteller_model.keras")
 
 with open("breeds.pkl", "rb") as f:
     breeds = pickle.load(f)
@@ -23,17 +42,16 @@ with open("breeds.pkl", "rb") as f:
 
 # get_features and extract_features functions will help us to
 # extract features from the image
-def get_features(model_name, model_preprocessor, input_size, data):
-
+def get_features(model_name, model_preprocessor, input_size, data, model_path):
     input_layer = Input(input_size)
     preprocessor = Lambda(model_preprocessor)(input_layer)
-    base_model = model_name(
-        weights="imagenet", include_top=False, input_shape=input_size
-    )(preprocessor)
-    avg = GlobalAveragePooling2D()(base_model)
+
+    base_model = model_name(weights=None, include_top=False, input_tensor=preprocessor)
+    base_model.load_weights(model_path)
+
+    avg = GlobalAveragePooling2D()(base_model.output)
     feature_extractor = Model(inputs=input_layer, outputs=avg)
 
-    # Extract feature
     feature_maps = feature_extractor.predict(data, verbose=1)
     print("Feature maps shape: ", feature_maps.shape)
     return feature_maps
@@ -52,18 +70,38 @@ def extract_features(data, img_size=(299, 299, 3)):
     """
     # Extract features using InceptionV3
     inception_features = get_features(
-        InceptionV3, inception_preprocessor, img_size, data
+        InceptionV3,
+        inception_preprocessor,
+        img_size,
+        data,
+        "src/machine_learning/models/inception_v3.h5",
     )
 
     # Extract features using Xception
-    xception_features = get_features(Xception, xception_preprocessor, img_size, data)
+    xception_features = get_features(
+        Xception,
+        xception_preprocessor,
+        img_size,
+        data,
+        "src/machine_learning/models/xception.h5",
+    )
 
     # Extract features using NASNetLarge
-    nasnet_features = get_features(NASNetLarge, nasnet_preprocessor, img_size, data)
+    nasnet_features = get_features(
+        NASNetLarge,
+        nasnet_preprocessor,
+        img_size,
+        data,
+        "src/machine_learning/models/nasnet_large.h5",
+    )
 
     # Extract features using InceptionResNetV2
     inc_resnet_features = get_features(
-        InceptionResNetV2, inc_resnet_preprocessor, img_size, data
+        InceptionResNetV2,
+        inc_resnet_preprocessor,
+        img_size,
+        data,
+        "src/machine_learning/models/inception_resnet_v2.h5",
     )
 
     # Concatenate all extracted features along the last axis

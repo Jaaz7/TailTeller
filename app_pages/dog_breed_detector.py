@@ -14,7 +14,7 @@ from src.machine_learning.load_sample_predict import (
     simple_fig_plot,
 )
 
-model = load_model("src/machine_learning/tailteller_model.keras")
+model = load_model("src/machine_learning/models/tailteller_model.keras")
 
 with open("breeds.pkl", "rb") as f:
     breeds = pickle.load(f)
