@@ -15,8 +15,8 @@ app = MultiPage(app_name="TailTeller") # Create an instance of the app
 
 # Add your app pages here using .add_page()
 app.add_page("Quick Project Summary", page_summary_body)
-app.add_page("Dog Breed Visualizer", visualizer_body)
-app.add_page("Dog Breed Identifier", dog_breed_detector_body)
+app.add_page("Data Visualizer", visualizer_body)
+app.add_page("Dog Breed Identification", dog_breed_detector_body)
 # app.add_page("Prospect Churnometer", page_prospect_body)
 # app.add_page("Project Hypothesis and Validation", page_project_hypothesis_body)
 # app.add_page("ML: Prospect Churn", page_predict_churn_body)

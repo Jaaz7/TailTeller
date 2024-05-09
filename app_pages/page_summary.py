@@ -22,7 +22,7 @@ def page_summary_body():
 
     st.success(
         'The project has 2 business requirements:\n'
-        '* 1 - The client would like to have a study of the dataset collected\n'
+        '* 1 - The client would like to have a study of the dataset collected.\n'
         '* 2 - The client requires a machine learning model developed to '
         'accurately identify dog breeds from images.'
     )

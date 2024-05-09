@@ -10,7 +10,7 @@ import random
 
 
 def visualizer_body():
-    st.write('### Dog Breed Identifier Visualizer')
+    st.write('### Data Visualizer')
     st.info(
         '* The client would like to have a study to identify '
          ' different dog breeds based on images.')
@@ -31,7 +31,7 @@ def visualizer_body():
         
         st.image(breed_count, use_column_width=True)
 
-    if st.checkbox("Let's look at two examples of pictures"):
+    if st.checkbox("Let's look at two examples our data"):
 
         two_dogs = 'assets/2_dogs.png'
 
@@ -43,8 +43,7 @@ def visualizer_body():
 
         st.info(
           '* The dataset is divided into two folders, train and test. '
-          'The train folder contains 5,111 images and the test folder '
-          'contains 5,111 images. The dataset is balanced, each folder '
+          'The dataset is balanced, each folder '
           'contains the same number of images.')
         
         st.text('Total dataset balance report:\n '

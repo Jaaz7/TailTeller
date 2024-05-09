@@ -21,7 +21,6 @@ from keras.applications.inception_resnet_v2 import preprocess_input as inc_resne
 
 
 model = load_model('tailteller_model.keras')
-model.summary()
 
 img_size = (299,299,3)
 
