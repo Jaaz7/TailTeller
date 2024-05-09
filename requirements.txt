@@ -7,3 +7,4 @@ streamlit==1.4.0
 scikit-learn==1.4.2
 tensorflow-cpu==2.16.1
 protobuf==3.20.3
+altair==4.1.0
