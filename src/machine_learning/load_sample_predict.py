@@ -3,7 +3,6 @@ import pandas as pd
 from keras.models import load_model
 import pickle
 import gc
-from keras.models import load_model
 from keras.preprocessing.image import load_img
 import numpy as np
 from keras.layers import Input, Lambda, GlobalAveragePooling2D
@@ -16,7 +15,7 @@ from keras.applications.nasnet import preprocess_input as nasnet_preprocessor
 from keras.applications.inception_resnet_v2 import preprocess_input as inc_resnet_preprocessor
 
 
-model = load_model('tailteller_model.keras')
+model = load_model('src/machine_learning/tailteller_model.keras')
 
 img_size = (299,299,3)
 
