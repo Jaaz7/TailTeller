@@ -28,4 +28,9 @@ images/
 kaggle.json
 
 # Pickle files
-*.pkl
+breed_dict.pkl
+final_features.pkl
+ids.pkl
+n_breeds.pkl
+test_predict.pkl
+y.pkl
