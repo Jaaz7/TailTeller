@@ -1,13 +1,9 @@
 import matplotlib.pyplot as plt
-from IPython.display import Image
 import pandas as pd
 from keras.models import load_model
 import pickle
 import gc
 from keras.models import load_model
-from tqdm.autonotebook import tqdm
-from sklearn.metrics import classification_report, accuracy_score
-from sklearn.preprocessing import LabelEncoder
 from keras.preprocessing.image import load_img
 import numpy as np
 from keras.layers import Input, Lambda, GlobalAveragePooling2D
