@@ -6,5 +6,5 @@ port = $PORT\n\
 enableCORS = false\n\
 \n\
 [logger]\n\
-level = 'debug'\n\
+level = 'info'\n\
 " > ~/.streamlit/config.toml
