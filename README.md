@@ -13,24 +13,24 @@ _I'm a good doggo, I deserves good algorithm. -Thor_
 
 ---
 # Table of Contents
-- ### [Dataset Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#dataset-content-1)
-- ### [Business Requirements](https://github.com/Jaaz7/TailTeller/edit/main/README.md#business-requirements-1)
-- ### [Hypothesis](https://github.com/Jaaz7/TailTeller/edit/main/README.md#hypothesis-1)
-- ### [Business Case](https://github.com/Jaaz7/TailTeller/edit/main/README.md#business-case-1)
-- ### [Model Development](https://github.com/Jaaz7/TailTeller/edit/main/README.md#ml-model-development)
-- ### [Dashboard Design](https://github.com/Jaaz7/TailTeller/edit/main/README.md#dashboard-design-1)
-- ### [Kanban Board](https://github.com/Jaaz7/TailTeller/edit/main/README.md#kanban-board-1)
-- ### [Unfixed bugs](https://github.com/Jaaz7/TailTeller/edit/main/README.md#unfixed-bugs-1)
-- ### [Deployment](https://github.com/Jaaz7/TailTeller/edit/main/README.md#deployment-1)
-- ### [Issues](https://github.com/Jaaz7/TailTeller/edit/main/README.md#issues-1)
-- ### [Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#testing-and-validation)
-  - [Manual Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#manual-testing)
-- ### [References](https://github.com/Jaaz7/TailTeller/edit/main/README.md#references-1)
-  - [Documentation](https://github.com/Jaaz7/TailTeller/edit/main/README.md#documentation)
-  - [Inspirational Resources](https://github.com/Jaaz7/TailTeller/edit/main/README.md#inspirational-resources)
-  - [Tools]([etc](https://github.com/Jaaz7/TailTeller/edit/main/README.md#tools)
-  - [Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#content)
-  - [Acknowledgements](https://github.com/Jaaz7/TailTeller/edit/main/README.md#acknowledgements)
+- ### [Dataset Content](https://github.com/Jaaz7/TailTeller#dataset-content-1)
+- ### [Business Requirements](https://github.com/Jaaz7/TailTeller#business-requirements-1)
+- ### [Hypothesis](https://github.com/Jaaz7/TailTeller#hypothesis-1)
+- ### [Business Case](https://github.com/Jaaz7/TailTeller#business-case-1)
+- ### [Model Development](https://github.com/Jaaz7/TailTeller#ml-model-development)
+- ### [Dashboard Design](https://github.com/Jaaz7/TailTeller#dashboard-design-1)
+- ### [Kanban Board](https://github.com/Jaaz7/TailTeller#kanban-board-1)
+- ### [Unfixed bugs](https://github.com/Jaaz7/TailTeller#unfixed-bugs-1)
+- ### [Deployment](https://github.com/Jaaz7/TailTeller#deployment-1)
+- ### [Issues](https://github.com/Jaaz7/TailTeller#issues-1)
+- ### [Testing](https://github.com/Jaaz7/TailTeller#testing-and-validation)
+  - [Manual Testing](https://github.com/Jaaz7/TailTeller#manual-testing)
+- ### [References](https://github.com/Jaaz7/TailTeller#references-1)
+  - [Documentation](https://github.com/Jaaz7/TailTeller#documentation)
+  - [Inspirational Resources](https://github.com/Jaaz7/TailTeller#inspirational-resources)
+  - [Tools]([etc](https://github.com/Jaaz7/TailTeller#tools)
+  - [Content](https://github.com/Jaaz7/TailTeller#content)
+  - [Acknowledgements](https://github.com/Jaaz7/TailTeller#acknowledgements)
 
 ---
 ## Dataset Content
@@ -104,7 +104,7 @@ Validation of this hypothesis would confirm the suitability of using multi-model
   Initial targets  might aim for an F1 score of above 0.90, accuracy and reliability are key.
 
 ---
-## ML Model Development
+## Model Development
 
   ### Technical Setup
   Models used in this Pipeline process:
@@ -286,7 +286,7 @@ As a client, I want to understand the technical processes and requirements invol
     online this is a very common occurence with data scientists. Docker fixed all that for me.
 
 ---
-## Testing and Validation
+## Testing
   ### Manual Testing
 1. As a client I can easily navigate through an interactive dashboard so that I can visualize and comprehend the presented data.
 
