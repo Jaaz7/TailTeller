@@ -22,6 +22,9 @@ def page_summary_body():
         "details about the performance of the machine learning model and "
         "real-time predictions with a downloadable report, along with "
         "a look into the hypothesis of a Multi-Class Classification Problem. \n"
+        "\n"
+        "The Dog Breed Identification submission was greatly optimized to save "
+        "RAM and CPU usage with the use of 'Python Garbage Collection'. \n"
     )
 
     st.write(

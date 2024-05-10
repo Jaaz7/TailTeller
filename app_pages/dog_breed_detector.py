@@ -25,6 +25,9 @@ def page_dog_breed_detector_body():
     st.info(
         "The model can now take any image to predict, you can upload any dog image to see the results. \n"
         "\n"
+        "**Important Notice:** This will take some computational resources to run. "
+        "Please be patient while the model processes the image. \n"
+        "\n"
         "* How to interpret the results: \n"
         "\n"
         "  - Dog breeds can show even if there are no dogs. \n"
