@@ -103,6 +103,7 @@ Validation of this hypothesis would confirm the suitability of using multi-model
   - The client sets a high bar for accuracy given the potential for the model to influence decisions about dog care and management.
   Initial targets  might aim for an F1 score of above 0.90, accuracy and reliability are key.
 
+  [Back to top](#table-of-contents)
 ---
 ## Model Development
 
