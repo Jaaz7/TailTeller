@@ -3,12 +3,12 @@
 It utilizes Artificial Intelligence and its primary goal is to tell the dog breed based on image data.<br>
 This application is developed using a [Streamlit Dashboard](https://tailteller-f41359586dd2.herokuapp.com/), providing users (such as veterinarians, dog breeders and groomers) with the capability to upload images of dogs and receive instant predictions regarding their breed.**
 <br><br>
-<img src="https://github.com/Jaaz7/TailTeller/assets/130407877/7bc4f516-4d85-4d3d-95da-2f349bad2464" width=85% height=85%>
+<img src="https://github.com/Jaaz7/TailTeller/assets/130407877/7bc4f516-4d85-4d3d-95da-2f349bad2464" width=90% height=90%>
 <br>
 **[Visit the live project here.](https://tailteller-f41359586dd2.herokuapp.com/)**
 
 <br><br>
-<img src="https://github.com/Jaaz7/TailTeller/assets/130407877/df07417c-b7fc-48d5-9282-71067e3744d6" width=40% height=40%><br>
+<img src="https://github.com/Jaaz7/TailTeller/assets/130407877/df07417c-b7fc-48d5-9282-71067e3744d6" width=30% height=30%><br>
 _I'm a good doggo, I deserves good algorithm._
 
 ---
