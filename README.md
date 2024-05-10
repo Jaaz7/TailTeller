@@ -189,6 +189,7 @@ As a client, I want to understand the technical processes and requirements invol
 ### Project Status
   - As of the last update, all the above user stories have been successfully implemented and the project is considered complete.
     
+    [Back to top](#table-of-contents)
 ---
 ## Unfixed Bugs
   - There are no unfixed bugs.
