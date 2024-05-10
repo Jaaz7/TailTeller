@@ -8,9 +8,6 @@ import base64
 from datetime import datetime
 from io import BytesIO
 import gc
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
 
 model = load_model("src/machine_learning/models/tailteller_model.keras")
 with open("breeds.pkl", "rb") as f:
@@ -26,7 +23,21 @@ from src.machine_learning.load_sample_predict import (
 def page_dog_breed_detector_body():
     st.write("### Dog Breed Identification")
     st.info(
-        "The client would like to be able to predict the dog breed based on an image."
+        "The model can now take any image to predict, you can upload any dog image to see the results. \n"
+        "\n"
+        "* There are some things to have in consideration: \n"
+        "\n"
+        "  - Dog breeds can show even if there are no dogs, how to interpret the results: \n"
+        "\n"
+        "  - The higher the probability, the more likely the breed is correct. \n"
+        "\n"
+        "  - All percentages besides the main one that are less "
+        "than 20% could mean there aren't any dogs. This could also apply "
+        "if a main percentage is below 30%. \n"
+        "\n"
+        "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. \n"
+        "\n"
+        "  - The model may convey several breeds for a mixed dog. \n"
     )
     st.write("---")
 
@@ -43,7 +54,6 @@ def page_dog_breed_detector_body():
         with Image.open(image_stream) as img_pil:
             img_pil = resize_image(img_pil, (299, 299))
 
-        st.info(f"Image: **{uploaded_img.name}**")
         st.image(
             img_pil,
             caption="The uploaded image was resized to "
@@ -84,23 +94,14 @@ def page_dog_breed_detector_body():
         df_predictions.index += 1
 
         if df_predictions.empty:
-            st.warning("All the predictions are <5%. This "
-                       "means the image is probably not a dog. Try another image.")
+            st.warning(
+                "All the predictions are <5%. This "
+                "means the image is probably not a dog. Try another image."
+            )
 
         if not df_predictions.empty:
             st.success(
                 "Analysis Report: Displaying all breed predictions above 5% probability. \n"
-                "\n"
-                "* Dog breeds can show even if there are no dogs, how to interpret the results: \n"
-                "\n"
-                "  - The higher the probability, the more likely the breed is correct. \n"
-                "\n"
-                "  - All percentages besides the main one that are less "
-                "than 20% could mean there aren't any dogs. \n"
-                "\n"
-                "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. \n"
-                "\n"
-                "  - The model may convey several breeds for a mixed dog. \n"
             )
             st.table(df_predictions)
             st.markdown(df_as_csv(df_predictions), unsafe_allow_html=True)

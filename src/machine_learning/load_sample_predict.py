@@ -21,9 +21,6 @@ from tensorflow.keras.applications.nasnet import preprocess_input as nasnet_prep
 from tensorflow.keras.applications.inception_resnet_v2 import (
     preprocess_input as inc_resnet_preprocessor,
 )
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
 
 with open("breeds.pkl", "rb") as f:
     breeds = pickle.load(f)

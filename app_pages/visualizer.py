@@ -5,7 +5,7 @@ from matplotlib.image import imread
 def page_visualizer_body():
     st.write("### Data Visualizer")
     st.info(
-        "* After loading the data, we can visualize it to "
+        "We load the data to visualize and "
         "understand its distribution. "
         "This will help us to understand the data better and "
         "make better decisions when building the model. "
@@ -18,7 +18,7 @@ def page_visualizer_body():
         breed_count = "assets/breed_countplot.jpg"
 
         st.info(
-            "* Here we can analyze the distribution of the dog breeds. "
+            "Here we can analyze the distribution of the dog breeds. "
             "There are  120 unique breeds in the dataset. Some breeds are "
             "more common than others. In the plot below, "
             "we can see the highest count of breeds is 70 and the lowest "
@@ -35,6 +35,7 @@ def page_visualizer_body():
     if st.checkbox("Let's look at two examples in our data"):
 
         two_dogs = "assets/2_dogs.png"
+
         st.info(
             '* On the left we have a dog from the breed "Kuvasz".\n'
             "\n"
@@ -42,9 +43,9 @@ def page_visualizer_body():
             "\n"
             "We can observe the images have different sizes, "
             "the images will be processed in something called "
-            "normalization, this will make the images have the same size. "
+            "normalization, this will transform the images into the same size. "
             "This is important for the model to "
-            "learn the features of the images. "
+            "learn the image features. "
         )
 
         st.image(two_dogs, use_column_width=True)
@@ -54,7 +55,7 @@ def page_visualizer_body():
         nr_imgs_plot = "assets/number_images_plot.png"
 
         st.info(
-            "* The dataset is divided into two folders, train and test. "
+            "The dataset is divided into two folders, train and test. "
             "The dataset is balanced, each folder "
             "contains the same number of images."
         )
