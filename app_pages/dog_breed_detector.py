@@ -25,9 +25,9 @@ def page_dog_breed_detector_body():
     st.info(
         "The model can now take any image to predict, you can upload any dog image to see the results. \n"
         "\n"
-        "* There are some things to have in consideration: \n"
+        "* How to interpret the results: \n"
         "\n"
-        "  - Dog breeds can show even if there are no dogs, how to interpret the results: \n"
+        "  - Dog breeds can show even if there are no dogs. \n"
         "\n"
         "  - The higher the probability, the more likely the breed is correct. \n"
         "\n"
@@ -37,7 +37,7 @@ def page_dog_breed_detector_body():
         "\n"
         "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. \n"
         "\n"
-        "  - The model may convey several breeds for a mixed dog. \n"
+        "  - Results for mixed breeds are inaccurate. \n"
     )
     st.write("---")
 

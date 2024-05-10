@@ -17,7 +17,7 @@ app.add_page("Quick Project Summary", page_summary_body)
 app.add_page("Data Visualizer",  page_visualizer_body)
 app.add_page("Model Performance", page_ml_performance_body)
 app.add_page("Dog Breed Identification", page_dog_breed_detector_body)
-app.add_page("Hypothesis", page_hypothesis_body)
+app.add_page("Hypothesis Statement", page_hypothesis_body)
 
 
 app.run()
