@@ -1,18 +1,11 @@
 import streamlit as st
-import os
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
 from matplotlib.image import imread
-import itertools
-import random
 
 
-def visualizer_body():
+def page_visualizer_body():
     st.write("### Data Visualizer")
     st.info(
-        "* After loading the data, we can visualize the it to "
+        "* After loading the data, we can visualize it to "
         "understand its distribution. "
         "This will help us to understand the data better and "
         "make better decisions when building the model. "

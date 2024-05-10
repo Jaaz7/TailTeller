@@ -23,7 +23,7 @@ from src.machine_learning.load_sample_predict import (
 )
 
 
-def dog_breed_detector_body():
+def page_dog_breed_detector_body():
     st.write("### Dog Breed Identification")
     st.info(
         "The client would like to be able to predict the dog breed based on an image."
@@ -46,12 +46,14 @@ def dog_breed_detector_body():
         st.info(f"Image: **{uploaded_img.name}**")
         st.image(
             img_pil,
-            caption="The uploaded image was resized to 299x299 pixels.",
+            caption="The uploaded image was resized to "
+            "299x299 pixels to fit the model.",
             use_column_width=True,
         )
 
         # Prepare image for prediction
         img_array = np.array(img_pil)
+        img_array = img_array[..., :3]
         img_array = np.expand_dims(img_array, axis=0)
 
         # Clear RAM
@@ -74,16 +76,31 @@ def dog_breed_detector_body():
                 "Prediction": [predictions_percent[i] for i in above_5_indices],
             }
         ).round(1)
+        df_predictions = df_predictions.sort_values(by="Prediction", ascending=False)
 
         df_predictions["Prediction"] = df_predictions["Prediction"].astype(str) + "%"
-        df_predictions = df_predictions.sort_values(
-            by="Prediction", ascending=False
-        ).reset_index(drop=True)
+
+        df_predictions = df_predictions.reset_index(drop=True)
         df_predictions.index += 1
+
+        if df_predictions.empty:
+            st.warning("All the predictions are <5%. This "
+                       "means the image is probably not a dog. Try another image.")
 
         if not df_predictions.empty:
             st.success(
-                "Analysis Report: Displaying all breed predictions above 5% probability."
+                "Analysis Report: Displaying all breed predictions above 5% probability. \n"
+                "\n"
+                "* Dog breeds can show even if there are no dogs, how to interpret the results: \n"
+                "\n"
+                "  - The higher the probability, the more likely the breed is correct. \n"
+                "\n"
+                "  - All percentages besides the main one that are less "
+                "than 20% could mean there aren't any dogs. \n"
+                "\n"
+                "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. \n"
+                "\n"
+                "  - The model may convey several breeds for a mixed dog. \n"
             )
             st.table(df_predictions)
             st.markdown(df_as_csv(df_predictions), unsafe_allow_html=True)
@@ -94,8 +111,6 @@ def dog_breed_detector_body():
                 get_image_download_link("simple_fig_plot.png", "bar_chart.png"),
                 unsafe_allow_html=True,
             )
-        else:
-            st.warning("No breed predictions were above 5% probability.")
 
 
 def df_as_csv(df):
