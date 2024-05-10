@@ -7,6 +7,10 @@ This application is developed using a [Streamlit Dashboard](https://tailteller-f
 <br>
 **[Visit the live project here.](https://tailteller-f41359586dd2.herokuapp.com/)**
 
+<br><br>
+<img src="https://github.com/Jaaz7/TailTeller/assets/130407877/df07417c-b7fc-48d5-9282-71067e3744d6" width=20% height=20%><br>
+_I'm a good doggo, I deserves good algorithm._
+
 ---
 # Table of Contents
 - ### [Dataset Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#dataset-content-1)
@@ -333,7 +337,8 @@ As a client, I want to understand the technical processes and requirements invol
     - [Seaborn 0.11.0](https://seaborn.pydata.org/) - A Python library for data science statistical visualization.
     - [Plotly 5.22.0](https://plotly.com/) - A Python Library used to represent complex data in interactive graphical visualizations.
     - [Docker](https://docs.docker.com/desktop/) - Docker is a platform that automates deployment, I couldn't have deployed a real-time 
-      model prediction without it, for a Machine Learning project it can be very challenging to deal with a 500mb slug size from Heroku.
+      model prediction without it, for a Machine Learning project it can be very challenging to deal with a 500mb slug size from Heroku.        Something that facilitates Docker is making a bash deploy.sh file, with a single command in the CLI the whole project is pushed 
+      directly to Heroku in seconds.
   - ### Inspirational Resources
     - I went through many inspirational projects in predictive analytics from GitHub by the search bar.
     - [freeCodeCamp mini course in Machine Learning](https://www.youtube.com/watch?v=i_LwzRVP7bg) - This video was helpful to understand         Classification using Tensorflow.
