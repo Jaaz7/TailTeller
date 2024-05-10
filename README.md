@@ -1,4 +1,4 @@
-# Dog Breed Identifier
+# TailTeller - An AI Dog Breed Identifier
 **A Data Science and Machine Learning project developed as part of a specialized pathway in Predictive Analytics.<br>
 It utilizes Artificial Intelligence and its primary goal is to tell the dog breed based on image data.<br>
 This application is developed using a [Streamlit Dashboard](https://tailteller-f41359586dd2.herokuapp.com/), providing users (such as veterinarians, dog breeders and groomers) with the capability to upload images of dogs and receive instant predictions regarding their breed.**
