@@ -62,15 +62,12 @@ def dog_breed_detector_body():
         features = extract_features(img_array)
 
         predictions = model.predict(features)
-        logging.debug(predictions.shape)
-        logging.debug(predictions)
         del features
         gc.collect()
 
         # Post-prediction processing
         predictions_percent = predictions[0] * 100
         above_5_indices = np.where(predictions_percent > 5)[0]
-        logging.debug(above_5_indices)
         df_predictions = pd.DataFrame(
             {
                 "Breed": [breeds[i] for i in above_5_indices],
@@ -82,6 +79,7 @@ def dog_breed_detector_body():
         df_predictions = df_predictions.sort_values(
             by="Prediction", ascending=False
         ).reset_index(drop=True)
+        df_predictions.index += 1
 
         if not df_predictions.empty:
             st.success(

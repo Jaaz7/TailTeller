@@ -44,54 +44,30 @@ def load_feature_model(model_name, preprocess, img_size, model_path):
 def extract_features(data):
     """Extracts features using pre-loaded models and concatenates them."""
     features_list = []
-
-    inception_v3_model = load_feature_model(
-        InceptionV3,
+    models = [InceptionV3, Xception, NASNetLarge, InceptionResNetV2]
+    preprocessors = [
         inception_preprocessor,
-        (299, 299, 3),
-        "src/machine_learning/models/inception_v3.h5",
-    )
-    features_list.append(inception_v3_model.predict(data, verbose=0))
-    del inception_v3_model
-    gc.collect()
-
-    xception_model = load_feature_model(
-        Xception,
         xception_preprocessor,
-        (299, 299, 3),
-        "src/machine_learning/models/xception.h5",
-    )
-    features_list.append(xception_model.predict(data, verbose=0))
-    del xception_model
-    gc.collect()
-
-    nasnet_large = load_feature_model(
-        NASNetLarge,
         nasnet_preprocessor,
-        (299, 299, 3),
-        "src/machine_learning/models/nasnet_large.h5",
-    )
-
-    features_list.append(nasnet_large.predict(data, verbose=0))
-    del nasnet_large
-    gc.collect()
-
-    # Second batch of models
-    inception_resnet_v2_model = load_feature_model(
-        InceptionResNetV2,
         inc_resnet_preprocessor,
-        (299, 299, 3),
+    ]
+    model_paths = [
+        "src/machine_learning/models/inception_v3.h5",
+        "src/machine_learning/models/xception.h5",
+        "src/machine_learning/models/nasnet_large.h5",
         "src/machine_learning/models/inception_resnet_v2.h5",
-    )
+    ]
 
-    features_list.append(inception_resnet_v2_model.predict(data, verbose=0))
-    del inception_resnet_v2_model
-    gc.collect()
+    for model_class, preprocessor, model_path in zip(
+        models, preprocessors, model_paths
+    ):
+        model = load_feature_model(model_class, preprocessor, (299, 299, 3), model_path)
+        features_list.append(model.predict(data, verbose=0))
+        del model
+        gc.collect()
 
-    # Concatenate all extracted features along the last axis
     final_features = np.concatenate(features_list, axis=-1)
 
-    # RAM cleanup
     del features_list
     gc.collect()
 
