@@ -5,32 +5,29 @@ This application is developed using a [Streamlit Dashboard](https://tailteller-f
 <br><br>
 <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/7bc4f516-4d85-4d3d-95da-2f349bad2464" width=75% height=75%>
 <br>
-**[Visit the live project here.](etc)**
+**[Visit the live project here.](https://tailteller-f41359586dd2.herokuapp.com/)**
 
 ---
 # Table of Contents
 - ### [Dataset Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#dataset-content-1)
 - ### [Business Requirements](https://github.com/Jaaz7/TailTeller/edit/main/README.md#business-requirements-1)
-- ### [Hypothesis](etc)
-- ### [Rationale](etc)
-- ### [Business Case](etc)
-- ### [Model Development](etc)
-  - [Part 1](etc)
-- ### [Hypothesis - Values](etc)
-- ### [Project Dashboard](etc)
-- ### [Unfixed bugs](etc)
-- ### [Deployment](etc)
-- ### [Data Analysis and Machine Learning Lbraries](etc)
-- ### [Issues](etc)
-- ### [Testing](etc)
-  - [Manual Testing](etc)
-  - [Validation](etc)
-- ### [References](etc)
-  - [Documentation](etc)
-  - [Inspirational Resources](etc)
-  - [Tools](etc)
-  - [Content](etc)
-  - [Acknowledgements](etc)
+- ### [Hypothesis](https://github.com/Jaaz7/TailTeller/edit/main/README.md#hypothesis-1)
+- ### [Business Case](https://github.com/Jaaz7/TailTeller/edit/main/README.md#business-case-1)
+- ### [Model Development](https://github.com/Jaaz7/TailTeller/edit/main/README.md#ml-model-development)
+- ### [Dashboard Design](https://github.com/Jaaz7/TailTeller/edit/main/README.md#dashboard-design-1)
+- ### [Kanban Board](https://github.com/Jaaz7/TailTeller/edit/main/README.md#kanban-board-1)
+- ### [Unfixed bugs](https://github.com/Jaaz7/TailTeller/edit/main/README.md#unfixed-bugs-1)
+- ### [Deployment](https://github.com/Jaaz7/TailTeller/edit/main/README.md#deployment-1)
+- ### [Issues](https://github.com/Jaaz7/TailTeller/edit/main/README.md#issues-1)
+- ### [Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#testing-and-validation)
+  - [Manual Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#manual-testing)
+  - [Validation](https://github.com/Jaaz7/TailTeller/edit/main/README.md#validation)
+- ### [References](https://github.com/Jaaz7/TailTeller/edit/main/README.md#references-1)
+  - [Documentation](https://github.com/Jaaz7/TailTeller/edit/main/README.md#documentation)
+  - [Inspirational Resources](https://github.com/Jaaz7/TailTeller/edit/main/README.md#inspirational-resources)
+  - [Tools]([etc](https://github.com/Jaaz7/TailTeller/edit/main/README.md#tools))
+  - [Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#content)
+  - [Acknowledgements](https://github.com/Jaaz7/TailTeller/edit/main/README.md#acknowledgements)
 
 ---
 ## Dataset Content
@@ -62,20 +59,83 @@ Initial hypotheses posit that machine learning models, particularly convolutiona
 Detailed analysis and performance metrics of the model.
 Continuous testing to ensure model accuracy and reliability.
 
+## Business Case
+  ### Project Overview:
+  - The client aims to accurately identify the breed of a dog from a given image. This business goal will be achieved through the       
+  development and deployment of a TensorFlow-based deep learning pipeline. The pipeline will utilize a dataset of images classified by 
+  dog breeds.
+
+  ### Technical Approach:
+  - The deep learning pipeline will utilize a convolutional neural network (CNN), a model highly effective at recognizing patterns in image 
+  data.
+
+  ### Objective:
+  - The primary objective of this machine learning pipeline is to create a multi-class classification model. The desired outcome is a model 
+  that can successfully categorize dog breeds.
+
+  ### Model Output:
+  - The model will output a classification label that indicates the breed of the dog, based on the probabilities calculated by the model.
+
+  ### Application of Results:
+  The images might be used by veterinary health care, training or grooming.
+
+  ### Performance Metrics:
+  - The success of this model will be evaluated based on overall accuracy and the F1 score for each breed. Given the varying sample sizes 
+  per breed, particular attention will be paid to minimize the risk of misclassification.
+
+  ### Accuracy and Reliability:
+  - The client sets a high bar for accuracy given the potential for the model to influence decisions about dog care and management.
+  Initial targets  might aim for an F1 score of above 0.90, accuracy and reliability are key.
+
 ---
 ## ML Model Development
-  - Multiple versions of our machine learning model have been developed, each iteratively improved based on testing feedback and       
-    performance metrics. The final model employs advanced deep learning techniques to ensure robust breed classification.
 
-    [Back to top](#table-of-contents)
+  ### Technical Setup
+  Models used in this Pipeline process:
+  
+  1. Inception V3: Known for its efficiency and ability to detect features.
+  2. Xception: Utilizes convolutions to provide a more efficient modeling.
+  3. NASNetLarge: Offers a scalable architecture for image recognition.
+  4. InceptionResNet V2: Combines the connections for faster training.
+     These models are put together in one to ensuring robust breed classification.
+
+  ### Image Preprocessing
+  - To standardize inputs and enhance model performance, images are resized to 299x299 pixels with three color channels (RGB). This 
+  resizing matches the input requirements of the models (as seen in Keras documentation), this helps with consistency.
+
+  ### Feature Extraction and Classification
+  - Each model processes the input images to extract vital features, which are then concatenated to form a comprehensive and rich feature 
+  set.
+
+  ### Feature Concatenation:
+  - Combines outputs from multiple pre-trained models to create a robust representation of the images.
+  - Classification: A final set of dense layers interprets these features to classify the image into one of the dog breeds. This is 
+  achieved using a softmax layer, which outputs a probability distribution over the breed classes.
+  This multi-model approach improves the accuracy of classification, and enhances the model's ability to identify unseen data reducing overfitting and improving predictions.
+
 ---
 ## Dashboard Design
 The Streamlit Dashboard serves as the user interface, allowing for easy interaction and access to the model’s capabilities. It provides:
 
 ---
-## Testing and Validation
-Comprehensive manual and automated testing ensures the reliability of the application. User story testing and continuous integration practices maintain the application's quality and performance.
+## Kanban Board
 
+---
+## Unfixed Bugs
+  - There are no unfixed bugs.
+
+---
+## Deployment
+
+---
+## Issues
+
+---
+## Testing and Validation
+  ### Manual Testing
+   - etc
+  ### Validation
+   - etc
 ---
 ## References
   - ### Documentation
@@ -92,6 +152,8 @@ Comprehensive manual and automated testing ensures the reliability of the applic
     - [Matplotlib 3.3.1](https://matplotlib.org/) -A Python Library that provides an object-oriented API for embedding plots.
     - [Seaborn 0.11.0](https://seaborn.pydata.org/) - A Python library for data science statistical visualization.
     - [Plotly 5.22.0](https://plotly.com/) - A Python Library used to represent complex data in interactive graphical visualizations.
+    - [Docker](https://docs.docker.com/desktop/) - Docker is a platform that automates deployment, I couldn't have deployed a real-time 
+      model prediction without it, for a Machine Learning project it can be very challenging to deal with a 500mb slug size from Heroku.
   - ### Inspirational Resources
     - I went through many inspirational projects in predictive analytics from GitHub by the search bar.
     - [freeCodeCamp mini course in Machine Learning](https://www.youtube.com/watch?v=i_LwzRVP7bg) - This video was helpful to understand         Classification using Tensorflow.
