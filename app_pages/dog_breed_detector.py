@@ -38,7 +38,9 @@ def page_dog_breed_detector_body():
         "than 20% could mean there aren't any dogs. This could also apply "
         "if a main percentage is below 30%. \n"
         "\n"
-        "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. \n"
+        "  - Dog breeds that aren't amongst the 120 in the dataset won't appear. "
+        "You can check all the breeds available by clicking in "
+        "page 2 'Data Visualizer' and 'Count per dog breed'. \n"
         "\n"
         "  - Results for mixed breeds are inaccurate. \n"
     )
