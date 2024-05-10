@@ -28,7 +28,7 @@ _I'm a good doggo, I deserves good algorithm. -Thor_
 - ### [References](https://github.com/Jaaz7/TailTeller#references-1)
   - [Documentation](https://github.com/Jaaz7/TailTeller#documentation)
   - [Inspirational Resources](https://github.com/Jaaz7/TailTeller#inspirational-resources)
-  - [Tools]([etc](https://github.com/Jaaz7/TailTeller#tools)
+  - [Tools](https://github.com/Jaaz7/TailTeller#tools)
   - [Content](https://github.com/Jaaz7/TailTeller#content)
   - [Acknowledgements](https://github.com/Jaaz7/TailTeller#acknowledgements)
 
