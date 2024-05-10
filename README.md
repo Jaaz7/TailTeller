@@ -172,19 +172,19 @@ The Streamlit Dashboard serves as the user interface, allowing for easy interact
   objective:
 
 - Interactive Dashboard Navigation:
-As a client, I can easily navigate through an interactive dashboard to visualize and comprehend the presented data.
+As a client, I can easily navigate through an interactive dashboard to visualize and comprehend the presented data.<br>
 *This ensures that users can effectively interact with the application, making intuitive data analysis.*<br><br>
 - Data Verification:
-As a client, I can see the data collected so I can verify its accuracy.
+As a client, I can see the data collected so I can verify its accuracy.<br>
 *Transparency in data handling is crucial for trust and reliability, allowing users to confirm the data's integrity themselves.*<br><br>
 - Model Accuracy Demonstration:
-As a client, I want to see a complete and clear demonstration of the model's accuracy with technical details.
+As a client, I want to see a complete and clear demonstration of the model's accuracy with technical details.<br>
 *This allows users to understand the effectiveness of the model in practical terms, backed by detailed technical information.*<br><br>
 - Model Testing by Uploading Pictures:
-As a client, I want to be able to upload pictures to test the model.
+As a client, I want to be able to upload pictures to test the model.<br>
 *This functionality is the Apex of this project and it allows users to interact directly with the model, testing its capabilities using their own data inputs.*<br><br>
 - Understanding Technical Processes:
-As a client, I want to understand the technical processes and requirements involved in building the model, so that I can assess its complexity and the expertise needed for potential adjustments or further development.
+As a client, I want to understand the technical processes and requirements involved in building the model, so that I can assess its complexity and the expertise needed for potential adjustments or further development.<br>
 *This story goes to the users who want a technical understanding of what happens in the backend of a machine learning model development.*<br><br>
 ### Project Status
   - As of the last update, all the above user stories have been successfully implemented and the project is considered complete.
