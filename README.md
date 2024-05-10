@@ -21,11 +21,10 @@ This application is developed using a [Streamlit Dashboard](https://tailteller-f
 - ### [Issues](https://github.com/Jaaz7/TailTeller/edit/main/README.md#issues-1)
 - ### [Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#testing-and-validation)
   - [Manual Testing](https://github.com/Jaaz7/TailTeller/edit/main/README.md#manual-testing)
-  - [Validation](https://github.com/Jaaz7/TailTeller/edit/main/README.md#validation)
 - ### [References](https://github.com/Jaaz7/TailTeller/edit/main/README.md#references-1)
   - [Documentation](https://github.com/Jaaz7/TailTeller/edit/main/README.md#documentation)
   - [Inspirational Resources](https://github.com/Jaaz7/TailTeller/edit/main/README.md#inspirational-resources)
-  - [Tools]([etc](https://github.com/Jaaz7/TailTeller/edit/main/README.md#tools))
+  - [Tools]([etc](https://github.com/Jaaz7/TailTeller/edit/main/README.md#tools)
   - [Content](https://github.com/Jaaz7/TailTeller/edit/main/README.md#content)
   - [Acknowledgements](https://github.com/Jaaz7/TailTeller/edit/main/README.md#acknowledgements)
 
@@ -54,11 +53,24 @@ This application is developed using a [Streamlit Dashboard](https://tailteller-f
     [Back to top](#table-of-contents)
 ---
 ## Hypothesis
-Initial hypotheses posit that machine learning models, particularly convolutional neural networks (CNNs), can effectively distinguish between dog breeds from images. Validation of these hypotheses will be conducted through:
 
-Detailed analysis and performance metrics of the model.
-Continuous testing to ensure model accuracy and reliability.
+### Problem Statement
+This project develops a machine learning model to accurately identify the breed of a dog from its image. This is challenging due to the fine-grained variations and similarities across different dog breeds.
 
+### Expected Model Behavior
+The model is expected to make deep learning techniques, specifically convolutional neural networks (CNNs), to capture complex features of dog breeds from images. The hypothesis is that using an ensemble of pre-trained models like Inception V3, Xception, NASNetLarge, and InceptionResNet V2, it will allow for a rich feature extraction and breed classification.
+
+### Assumptions
+- The dataset contains high-quality images of 120 dog breeds.
+- The breeds are represented with different sample numbers so it's possible more breeds will have higher accuracy than others, however an overall high accuracy is expected.
+
+### Basis of Hypothesis
+Based on prior successes with CNNs in image recognition tasks and their ability to learn hierarchical feature representations, these models are well-suited for detailed and nuanced image-based classification tasks like dog breed identification.
+
+### Implications of Hypothesis Validation
+Validation of this hypothesis would confirm the suitability of using multi-model CNN ensembles for breed classification. If the hypothesis is validated, it would lead to further development and potentially real-world application of the model. If invalidated, it would necessitate a reevaluation of the model architecture or training process.
+
+---
 ## Business Case
   ### Project Overview:
   - The client aims to accurately identify the breed of a dog from a given image. This business goal will be achieved through the       
@@ -115,27 +127,195 @@ Continuous testing to ensure model accuracy and reliability.
 
 ---
 ## Dashboard Design
-The Streamlit Dashboard serves as the user interface, allowing for easy interaction and access to the model’s capabilities. It provides:
+The Streamlit Dashboard serves as the user interface, allowing for easy interaction and access to the model’s capabilities. It has 5 pages:
+    <details><summary>1st Page - Project Summary</summary>
+    <br><br>
+    This page offers a summary of the project, what to expect going to the next pages and presents the 2 business requirements:
+    <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/fb55c297-ed43-40d7-9435-c344ac1c1158" width="80%"       
+    height="80%"><br></details>
+    <br><br>
+    <details><summary>2st Page - Data Visualizer</summary>
+    <br><br>
+    This page shows the type of data that will be worked on:
+    <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/7ea22652-c48a-4016-a960-19b28d3873d5" width="80%"       
+    height="80%"><br></details>
+    <br><br>
+    <details><summary>3st Page - Model Performance</summary>
+    <br><br>
+    This page goes into the details of the model's performance, like accuracy percentage:
+    <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/2236b575-5b2d-4d97-b35d-1d95f52c7d00" width="80%"       
+    height="80%"><br></details>
+    <br><br>
+    <details><summary>4st Page - Dog Breed Identifier</summary>
+    <br><br>
+    This page allows users to upload pictures and make live predictions:
+    <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/48b6908b-08cf-40c3-9237-670bc85a3005" width="80%"       
+    height="80%"><br></details>
+    <br><br>
+    <details><summary>5st Page - Hypothesis and Inaccuracies</summary>
+    <br><br>
+    This page elaborates about the hypothesis of the project and also points out some things to take into consideration when using this 
+    A.I model:<br>
+    <img src="https://github.com/Jaaz7/TailTeller/assets/130407877/79cfec69-078d-49a1-bba6-4f90c7e751c6" width="80%"       
+    height="80%"><br></details>
 
 ---
 ## Kanban Board
+  ### User Stories
+  The kanban board has user stories and dealines associated with them.
+  This project was designed with the following user stories in mind, guiding the development and ensuring the final product meets the end 
+  objective:
 
+- Interactive Dashboard Navigation:
+As a client, I can easily navigate through an interactive dashboard to visualize and comprehend the presented data.
+*This ensures that users can effectively interact with the application, making intuitive data analysis.*<br><br>
+- Data Verification:
+As a client, I can see the data collected so I can verify its accuracy.
+*Transparency in data handling is crucial for trust and reliability, allowing users to confirm the data's integrity themselves.*<br><br>
+- Model Accuracy Demonstration:
+As a client, I want to see a complete and clear demonstration of the model's accuracy with technical details.
+*This allows users to understand the effectiveness of the model in practical terms, backed by detailed technical information.*<br><br>
+- Model Testing by Uploading Pictures:
+As a client, I want to be able to upload pictures to test the model.
+*This functionality is the Apex of this project and it allows users to interact directly with the model, testing its capabilities using their own data inputs.*<br><br>
+- Understanding Technical Processes:
+As a client, I want to understand the technical processes and requirements involved in building the model, so that I can assess its complexity and the expertise needed for potential adjustments or further development.
+*This story goes to the users who want a technical understanding of what happens in the backend of a machine learning model development.*<br><br>
+### Project Status
+  - As of the last update, all the above user stories have been successfully implemented and the project is considered complete.
+    
 ---
 ## Unfixed Bugs
   - There are no unfixed bugs.
 
 ---
 ## Deployment
+  - ### Local Cloning
+    <details><summary>Click here to expand</summary>
+    ‎1. Log in to GitHub and locate GitHub Repository home-cooked-harmony.
+    <br><br>
+    ‎2. Click on the green code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+    <br><br>
+    ‎3. Open the terminal in your IDE and change the current working directory to the location you want to use for the cloned directory.
+    <br><br>
+    ‎4. Change the current working directory to the location where you want the cloned directory to be created.
+    <br><br>
+    ‎5. Type <pre><code>git clone</code></pre> and then paste The URL copied in step 2.
+    <br><br>
+    ‎6. Set up a virtual environment navigating into your project with <pre><code>cd path/to/project</code></pre> and running the command <pre><code>python3 -m venv venv</code></pre> replace the second "venv" with any name you want. Activate your virtual environment with:  (in Linux OS) <pre><code>source venv/bin/activate</pre></code>
+    <br>
+    ‎7. Install dependencies with <pre><code>pip3 install -r requirements.txt</pre></code>Your local clone has been created.</details>
+  - ### Forking the Github Repository
+    <details><summary>Click here to expand</summary>
+    ‎1. Log in to GitHub and locate GitHub Repository home-cooked-harmony.
+    <br><br>
+    ‎2. At the top of the Repository, under the main navigation, Click "Fork" button. Your fork has been created. You can locate it in your repositories section.</details>
+  - ### Docker
+    1. Install Docker: Ensure Docker is installed on local machine. Download it from Docker's official website.<br><br>
+    2. Ensure the Heroku Command Line Interface (CLI) is installed. The installation instructions is on the Heroku website.<br><br>
+    3. Create a Dockerfile in the root directory of the application. This file defines the Docker image and specifies all the commands 
+       needed to run the app. This is an example of a dockerfile:<br><br>
+    ```
+        # Use an official Python runtime as a base image
+        FROM python:3.9.19
+    
+        # Set the working directory in the container
+        WORKDIR /app
+    
+        # Install system libraries required by numpy
+        RUN apt-get update && apt-get install -y \
+            build-essential \
+            libatlas-base-dev
+    
+        # Copy the local directory files to the container's workspace
+        COPY . /app
+        
+        # Install the necessary packages specified in requirements.txt
+        RUN pip install --no-cache-dir numpy==1.26.4 \
+                                         pandas==2.2.2 \
+                                         matplotlib==3.3.1 \
+                                         seaborn==0.11.0 \
+                                         plotly==5.22.0 \
+                                         streamlit==1.34.0 \
+                                         scikit-learn==1.4.2 \
+                                         tensorflow-cpu==2.16.1 \
+                                         protobuf==3.20.3 \
+                                         altair==4.1.0 \
+                                         click==8.0.0
+    
+          EXPOSE 8501
+      
+          # Run the Streamlit application command
+          CMD streamlit run --server.port $PORT app.py
+
+    ```
+     
+    4. Log in to Heroku CLI:
+    ```
+    heroku login
+    ```
+    5. Log in to container:
+    ```
+    heroku container:login
+    ```
+    6. Create a Heroku App
+    ```
+    heroku create your-app-name
+    ```
+    7. Build the Docker image:
+    ```
+    heroku container:push web -a your-app-name
+    ```
+    8. Release the image:
+    ```
+    heroku container:release web -a your-app-name
+    ```
+    9. To see the logs for debugging:
+    ```
+    heroku logs --tail -a your-app-name
+    ```
 
 ---
 ## Issues
+  - My biggest challenge this project was managing large files with github and heroku, heroku has a limit slug size of 500mb but my build     was over this amount even though my repo was 18mb at the time, I was using .gitignore and .slugignore to skip/hide any big files, 
+    images folders included. I decided to use Docker and leave heroku deployments because it took a large amount of my time, I found out 
+    online this is a very common occurence with data scientists. Docker fixed all that for me.
 
 ---
 ## Testing and Validation
   ### Manual Testing
-   - etc
-  ### Validation
-   - etc
+1. As a client I can easily navigate through an interactive dashboard so that I can visualize and comprehend the presented data.
+
+| Feature | Action | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+| Sidebar | Clicking the buttons | Routed to selected page displayed| Works as expected |
+
+2. As a client I can see the data collected so I can verify its accuracy.
+
+| Feature | Action | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+ Count per dog breed checkbox | clicking the checkbox | image is rendered | Works as expected |
+| Let's look at two examples in our data checkbox | clicking the checkbox | image is rendered | Works as expected |
+| Number of images per folder: "train" and "test" checkbox | clicking the checkbox | image is rendered | Works as expected |
+
+3. As a client I want to see a complete and clear demonstration on the accuracy of the model with technical details.
+
+| Feature | Action | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+ Train and Validation results checkbox| clicking the checkbox | image is rendered | Works as expected |
+| F1-Score | clicking the checkbox | image is rendered | Works as expected |
+
+4. As a client I want to be able to upload pictures to test the model.
+
+| Feature | Action | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+| File uploader | Uploads image | Outputs the current uploaded image, a DataFrame with the results and one plot | Works as expected |
+
+5. As a client, I want to understand the technical processes and requirements involved in building the model, so that I can assess its complexity and the expertise needed for potential adjustments or further development.
+
+| Feature | Action | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+| See Hypothesis | Clicking the Hypothesis Statement sidebar page | View page | Works as expected |
 ---
 ## References
   - ### Documentation
