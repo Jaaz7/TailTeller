@@ -113,7 +113,7 @@ Validation of this hypothesis would confirm the suitability of using multi-model
   1. Inception V3: Known for its efficiency and ability to detect features.
   2. Xception: Utilizes convolutions to provide a more efficient modeling.
   3. NASNetLarge: Offers a scalable architecture for image recognition.
-  4. InceptionResNet V2: Combines the connections for faster training.
+  4. InceptionResNet V2: Combines the connections for faster training.<br>
      These models are put together in one to ensuring robust breed classification.
 
   ### Image Preprocessing
@@ -192,7 +192,7 @@ As a client, I want to understand the technical processes and requirements invol
     [Back to top](#table-of-contents)
 ---
 ## Unfixed Bugs
-  - There are no unfixed bugs.
+  - There aren't known unfixed bugs.
 
 ---
 ## Deployment
