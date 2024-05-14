@@ -106,9 +106,12 @@ Validation of this hypothesis would confirm the suitability of using multi-model
     [Back to top](#table-of-contents)
 ---
 ## Model Development
+  ### Model Development Diagram<br>
+  <img src='https://github.com/Jaaz7/TailTeller/assets/130407877/81124cb9-d851-4883-b03e-97e2d86d36e4' width="70%"       
+    height="70%"><br><br>
 
   ### Technical Setup
-  Models used in this Pipeline process:
+  Pre-Trained Models used in the Pipeline:
   
   1. Inception V3: Known for its efficiency and ability to detect features.
   2. Xception: Utilizes convolutions to provide a more efficient modeling.
@@ -120,15 +123,30 @@ Validation of this hypothesis would confirm the suitability of using multi-model
   - To standardize inputs and enhance model performance, images are resized to 299x299 pixels with three color channels (RGB). This 
   resizing matches the input requirements of the models (as seen in Keras documentation), this helps with consistency.
 
-  ### Feature Extraction and Classification
+  ### Feature Extraction with the Pre-Trained Models
   - Each model processes the input images to extract vital features, which are then concatenated to form a comprehensive and rich feature 
   set.
+  This multi-model approach improves the accuracy of classification, and enhances the model's ability to identify unseen data reducing 
+  overfitting and improving predictions.
 
   ### Feature Concatenation:
   - Combines outputs from multiple pre-trained models to create a robust representation of the images.
-  - Classification: A final set of dense layers interprets these features to classify the image into one of the dog breeds. This is 
-  achieved using a softmax layer, which outputs a probability distribution over the breed classes.
-  This multi-model approach improves the accuracy of classification, and enhances the model's ability to identify unseen data reducing overfitting and improving predictions.
+
+  ### Sequential Deep Learning:
+  - Sequential is a subset of deep learning techniques where the model processes data in a sequence.
+  - A sequential model for a CNN is a common and effective approach for image classification tasks, in this case I'm initializing the model with "Sequential" to add the layers "Dropout" and "Dense" in a sequence.
+  ### Dropout Layer:
+  - The Dropout layer is a regularization technique used in CNNs to prevent overfitting in a neural network model. It specifies the dropout rate at which nodes (neurons) are randomly dropped during training, in this case it's 0.7 (70%). By dropping 70% of the neurons randomly, the network becomes less sensitive to the specific weights of neurons, this will reduce the risk of overfitting in the training data.
+  ### Dense Layer:
+  -  The softmax activation function is called within the Dense layer and it's essential for converting raw network outputs into a probability distribution, making it suitable for multi-class classification tasks.
+  ### Adam Optimizer:
+  - The Adam optimizer is a powerful and flexible optimization algorithm that includes bias correction to counteract the bias introduced 
+  during the initial stages of training.
+
+### Using the Model to Predict Images<br>
+<img src='https://github.com/Jaaz7/TailTeller/assets/130407877/7091dd7b-8357-4cb9-ba3b-dffabdf0a07a' width="70%"       
+    height="70%"><br>
+    This diagram shows the back-end process when the end-user uploads an image for prediction in the Streamlit website.
 
 ---
 ## Dashboard Design
